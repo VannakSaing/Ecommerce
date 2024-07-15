@@ -6,7 +6,7 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-lg  navbar-light bg-white py-3 shadow-sm">
                 <div className="container-fluid">
-                    <NavLink className="navbar-brand fw-bold fs-4" to="/">VA COLLECTION</NavLink>
+                    <NavLink className="navbar-brand fw-bold fs-4" to="/">MY COLLECTION</NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
