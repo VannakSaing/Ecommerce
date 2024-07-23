@@ -1,29 +1,23 @@
-# Use the official Node.js image as the base image
-FROM node:16 AS build
+# Use an official Node.js runtime as a parent image
+FROM node:20-alpine AS build
 
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy package.json and package-lock.json to the container
+COPY package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the rest of the application
+# Copy the rest of the application to the container
 COPY . .
 
-# Build the React app
+# Build the Next.js application
 RUN npm run build
 
-# Use the official Nginx image to serve the app
-FROM nginx:stable-alpine
+# Expose the port the app runs on
+EXPOSE 3000
 
-# Copy the build output to the Nginx html directory
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 80
-EXPOSE 80
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Run the Next.js application
+CMD ["npm", "start"]
