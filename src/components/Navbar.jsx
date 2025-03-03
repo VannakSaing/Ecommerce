@@ -26,7 +26,7 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="buttons">
-                            <NavLink to="/login" className="btn btn-outline-dark">
+                            {/* <NavLink to="/login" className="btn btn-outline-dark">
                                 <i className="fa fa-sign-in me-1"> Login</i>
                             </NavLink>
                             <NavLink to="/register" className="btn btn-outline-dark ms-2">
@@ -34,7 +34,7 @@ const Navbar = () => {
                             </NavLink>
                             <NavLink to="/cart" className="btn btn-outline-dark ms-2">
                                 <i className="fa fa-shopping-cart me-1"> Cart (0)</i>
-                            </NavLink>
+                            </NavLink> */}
                         </div>
                     </div>
                 </div>
